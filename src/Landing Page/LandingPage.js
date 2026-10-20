@@ -5,7 +5,18 @@ import EmailCapture from './components/EmailCapture'
 import GraduationImage from './components/GraduationImage'
 import './LandingPage.css'
 
-const LandingPage = () => {
+import { addDoc } from '@firebase/firestore'
+import {emailsRef} from './../services/firebase'
+
+const LandingPage = (userEmail) => {
+
+    const sendEmail = async () => {
+        const emailDocRef = await addDoc(emailsRef, {
+            email: userEmail
+        });
+        console.log(`Created email document with reference: ${emailDocRef.id}`)
+    }
+
     return (
         <div className='landing-page'>
             <div className="max" />

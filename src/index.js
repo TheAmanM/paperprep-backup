@@ -6,9 +6,9 @@ import LandingPage from './Landing Page/LandingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <LandingPage />
-  </React.StrictMode>
+  // <React.StrictMode>
+    <h1>Ho</h1>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
